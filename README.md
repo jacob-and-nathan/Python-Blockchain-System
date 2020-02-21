@@ -1,14 +1,14 @@
 # Python-Blockchain-System
-An in-progress blockchain made in python
+An finished(for now!) blockchain made in python
 
 COMPLETED FEATURES:
 A block hash calculator function. 
-A 'add new block' function
-
-PLANNED FEATURES:
+A 'add new block' function. 
 Block mining. 
-A system for adding new nodes based on multiplayer-based connections. 
+A system for mining blocks. 
+A system to manage blockchain. 
+A way to view all blocks added. 
+Blockchain shows you the estimated value of the blockchain. 
 
-POSSINBLE FUTURE FEATURES:
-A way to view all blocks added, on a txt file? 
-Make blockchain store a values and add a feature to view the estimated (value) of the value? (Like Cryptos).
+POSSIBLE FUTURE FEATURES:
+Allow other people to connect, view copy of transaction file, and mine blocks(making it delocalised)
