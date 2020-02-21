@@ -1,5 +1,7 @@
 import datetime
 import hashlib
+from termcolor import colored
+
 
 #Create a 'Block' class
 class Block :
@@ -61,9 +63,33 @@ class Blockchain :
       #Check if the proposed block is to be accepted
       if int(Block.hashBlock(), 16) <= blockchain.target :
         Blockchain.generateBlock(block)
+
+        #Store in txt file
+        file = open('mineHistory.txt', 'a')
+        file.write("Hash: " + Block.hashBlock() + "\nNonce: " + str(Block.nonce) + "\n")
         break
       else :
         #Increase the nonce
         Block.nonce = Block.nonce + 1
 
 blockchain = Blockchain()
+
+value = 0
+#Repeat forever
+while True:
+  response = input(colored("Enter m to mine a new block\n Press t to view all hashes generated\nPress v to see the simulated value of each block: ", "green")) 
+  if response == 't' :
+    file = open('mineHistory.txt', 'r')
+    print (colored("Reading responses: ", "green"))
+    print (colored(file.read(), "red"))
+  elif response == 'm' :
+    block = input("What data do you want the block to hold? ")
+    times = int(input("How many times do you want to mine? "))
+    for n in range(times) :
+      blockchain.mine(block)
+      print ("Block mined")
+      value = Block.nonce/2
+  elif response == 'v' :
+    print ("Relative value of blocks: " + str(value) + "\nThe value is based on the difficulty to mine")
+  else :
+    print(colored("Sorry, please type that again", "red"))
