@@ -1,0 +1,4 @@
+REQUIREMENTS:
+Python 3
+Termcolor package
+A working computer, of course!
