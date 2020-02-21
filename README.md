@@ -1,5 +1,8 @@
 # Python-Blockchain-System
-An finished(for now!) blockchain made in python
+An finished(for now!) blockchain made in python 
+
+## Download libraries:
+Visit https://pypi.org/project/termcolor/ or run 'pip install termcolor'
 
 ## Want to see this without downloading it? Run it online at https://repl.it/@JacobMacLeod/Python-Blockchain
 
